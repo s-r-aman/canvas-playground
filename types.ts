@@ -9,7 +9,7 @@ export interface Store {
   isPlaying: boolean;
   subtitlesData: Subtitle[];
   canvasCtx?: CanvasRenderingContext2D | null;
-  videoURL: string;
+  videoURL?: string;
   videoProgress: number;
   seekTime?: number;
 }

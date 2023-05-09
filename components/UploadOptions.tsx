@@ -12,9 +12,9 @@ export const UploadOptions: React.FC<UploadOptionsProps> = ({
   return (
     <div className="p-10 mx-auto w-3/4 flex justify-center items-center">
       <p className="p-4 border-gray-400">Upload Video:</p>
-      <input onChange={handleVideoChange} type="file" accept="" />
+      <input onChange={handleVideoChange} type="file" accept="video/*" />
       <p className="p-4 border-gray-400">Upload SRT: </p>
-      <input onChange={handleSrtChange} type="file" accept="" />
+      <input onChange={handleSrtChange} type="file" accept=".srt" />
     </div>
   );
 };

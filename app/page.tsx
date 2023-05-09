@@ -55,27 +55,39 @@ export default function Home() {
     }
   };
 
+  const fallback = (
+    <div className="mx-auto text-center my-40">
+      Please upload a video file to play.
+    </div>
+  );
+
   return (
     <div>
       <UploadOptions
         handleVideoChange={handleVideoChange}
         handleSrtChange={handleSrtChange}
       />
-      <Video
-        videoURL={videoURL}
-        subtitlesData={subtitlesData}
-        setVideoProgress={(time) =>
-          dispatch({ type: actions.SET_VIDEO_PROGRESS, payload: time })
-        }
-        isPlaying={isPlaying}
-        seekProgress={seekTime}
-      />
-      <Controls
-        playVideo={playVideo}
-        pauseVideo={pauseVideo}
-        updateProgress={updateVideoProgress}
-        progress={videoProgress}
-      />
+      {videoURL ? (
+        <>
+          <Video
+            videoURL={videoURL}
+            subtitlesData={subtitlesData}
+            setVideoProgress={(time) =>
+              dispatch({ type: actions.SET_VIDEO_PROGRESS, payload: time })
+            }
+            isPlaying={isPlaying}
+            seekProgress={seekTime}
+          />
+          <Controls
+            playVideo={playVideo}
+            pauseVideo={pauseVideo}
+            updateProgress={updateVideoProgress}
+            progress={videoProgress}
+          />
+        </>
+      ) : (
+        fallback
+      )}
     </div>
   );
 }

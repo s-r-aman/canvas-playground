@@ -90,7 +90,7 @@ export const Video: React.FC<VideoProps> = (props) => {
   return (
     <div>
       <video ref={videoEl} src={videoURL} />
-      <canvas height="500" width="1000" className="mx-auto" ref={canvasEl} />
+      <canvas height="560" width="1000" className="mx-auto" ref={canvasEl} />
     </div>
   );
 };
