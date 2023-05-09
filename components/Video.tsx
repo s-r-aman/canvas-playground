@@ -50,9 +50,9 @@ export const Video: React.FC<VideoProps> = (props) => {
       const videoHeight = videoEl.current.videoHeight;
       const videoWidht = videoEl.current.videoWidth;
       // clear the canvas before painting again.
-      canvasCtx.clearRect(0, 0, 1000, 500);
+      canvasCtx.clearRect(0, 0, 1000, 560);
 
-      canvasCtx.drawImage(videoEl.current, 0, 0, videoWidht, videoHeight);
+      canvasCtx.drawImage(videoEl.current, 0, 0, 1000, 560);
 
       // add subtitles
       if (videoEl.current.currentTime) {
