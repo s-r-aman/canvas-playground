@@ -25,3 +25,24 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+video {
+  display: none;
+}
+
+.seek-wrapper {
+  background: pink;
+  width: 1000px;
+  cursor: pointer;
+  margin: 5px auto 40px auto;
+}
+
+.seekbar {
+  width: var(--progress);
+  height: 10px;
+  background: red;
+}
+
+canvas {
+  margin: 0 auto;
+}
