@@ -66,7 +66,7 @@ export const Video: React.FC<VideoProps> = (props) => {
           canvasCtx.font = "bold 20px Arial";
           canvasCtx.textAlign = "center";
           canvasCtx.fillStyle = "white";
-          canvasCtx.fillText(subtitle.text, 500, 450);
+          canvasCtx.fillText(subtitle.text, 500, 500);
         }
       }
     }
